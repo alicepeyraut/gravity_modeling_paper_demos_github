@@ -51,7 +51,7 @@ launch_buttons:
   # jupyterhub_url: https://jupytercloud.idcs.polytechnique.fr/jupyter
 
 
-  sphinx:
-    config:
-      html_theme_options:
-        use_repository_button: true
+  # sphinx:
+  #   config:
+  #     html_theme_options:
+  #       use_repository_button: true
