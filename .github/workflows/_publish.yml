@@ -11,7 +11,7 @@ name: Build and Deploy Jupyter Book
 on:
   push:
     branches:
-      - HEAD
+      - main
   
 jobs:
     build_jupyterbook:
@@ -32,7 +32,7 @@ jobs:
               run: |
                 pip install -U jupyter-book
                 jupyter-book clean .
-                jupyter-book build . --verbose
+                jupyter-book build .
     
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
@@ -76,7 +76,7 @@ jobs:
                 ls -ltr
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v4
+              uses: actions/upload-pages-artifact@v3
               with:
             # Upload entire repository
                 path: './jupyter-book-build/'
@@ -92,6 +92,8 @@ jobs:
 
 
     build_docker_image:
+        if: false
+
         runs-on: ubuntu-20.04
         permissions:
             contents: read
