@@ -4,3 +4,9 @@
 
 
 (Code for the demos is at [https://github.com/alicepeyraut/gravity_modeling_paper_demos_github](https://github.com/alicepeyraut/gravity_modeling_paper_demos_github), main library at [https://github.com/mgenet/dolfin_mech](https://github.com/mgenet/dolfin_mech).)
+
+
+- [Figure 3](demos/Fig3.ipynb)
+- [Figure 4](demos/Fig4.ipynb)
+- [Figure 8](demos/Fig8.ipynb)
+- [Figure 9](demos/Fig9.ipynb)
