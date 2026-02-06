@@ -20,7 +20,7 @@ jobs:
         steps:
             # Checkout the code from the repository
             - name: Checkout code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v3
       
             - name: Set up Python
               uses: actions/setup-python@v5
@@ -32,7 +32,7 @@ jobs:
               run: |
                 pip install -U jupyter-book
                 jupyter-book clean .
-                jupyter-book build . --verbose
+                jupyter-book build .
     
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
@@ -58,7 +58,7 @@ jobs:
         steps:
             # Checkout the code from the repository
             - name: Checkout code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v3
 
             # Download the build artifacts from the previous job
             - name: Download Build Artifacts
@@ -76,7 +76,7 @@ jobs:
                 ls -ltr
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v4
+              uses: actions/upload-pages-artifact@v3
               with:
             # Upload entire repository
                 path: './jupyter-book-build/'
@@ -99,7 +99,7 @@ jobs:
         steps:
         # Checkout the repository
         - name: Checkout code
-          uses: actions/checkout@v4
+          uses: actions/checkout@v3
 
         # Set up Docker Buildx (for advanced Docker features)
         - name: Set up Docker Buildx
