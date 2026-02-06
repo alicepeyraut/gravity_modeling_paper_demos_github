@@ -41,7 +41,7 @@ latex:
 repository:
   url: https://github.com/alicepeyraut/gravity-modeling-paper-demos
   path_to_book: .
-  branch: HEAD
+  branch: main
 
 launch_buttons:
   notebook_interface: classic  # jupyterlab, classic
