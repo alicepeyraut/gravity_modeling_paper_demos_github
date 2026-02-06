@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: index
+root: demos/Fig3
 chapters:
 - file: demos/Fig3
 - file: demos/Fig4
