@@ -20,7 +20,7 @@ jobs:
         steps:
             # Checkout the code from the repository
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
       
             - name: Set up Python
               uses: actions/setup-python@v5
@@ -58,7 +58,7 @@ jobs:
         steps:
             # Checkout the code from the repository
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             # Download the build artifacts from the previous job
             - name: Download Build Artifacts
@@ -99,7 +99,7 @@ jobs:
         steps:
         # Checkout the repository
         - name: Checkout code
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
 
         # Set up Docker Buildx (for advanced Docker features)
         - name: Set up Docker Buildx
