@@ -4,7 +4,7 @@
 format: jb-book
 root: index
 chapters:
-- file: HEAD/demos/Fig3
-- file: HEAD/demos/Fig4
-- file: HEAD/demos/Fig8
-- file: HEAD/demos/Fig9
+  - file: demos/Fig3
+  - file: demos/Fig4
+  - file: demos/Fig8
+  - file: demos/Fig9
