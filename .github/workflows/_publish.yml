@@ -24,7 +24,7 @@ jobs:
       - run: ls -R
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: /_build/html
+          path: /_build
 
   deploy:
     needs: build
