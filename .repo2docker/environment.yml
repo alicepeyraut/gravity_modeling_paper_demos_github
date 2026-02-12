@@ -36,6 +36,7 @@ dependencies:
 
 # coding stuff
   - git=2.39
+  - mystmd<1.0
 
 # plotting stuff
   - matplotlib=3.7
