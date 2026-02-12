@@ -34,6 +34,9 @@ dependencies:
   - gmsh=4.11
   - meshio=5.3
 
+# coding stuff
+  - git=2.39
+
 # plotting stuff
   - matplotlib=3.7
 
