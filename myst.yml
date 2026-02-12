@@ -1,4 +1,6 @@
 # myst.yml
+version: 1  # REQUIRED
+
 book:
   root: "."        
 
