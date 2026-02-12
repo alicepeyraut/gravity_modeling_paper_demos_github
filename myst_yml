@@ -1,0 +1,3 @@
+- name: Build MyST
+  run: myst build
+  working-directory: gravity_modeling_paper_demos_github
