@@ -20,7 +20,7 @@ jobs:
         steps:
             # Checkout the code from the repository
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
       
             - name: Set up Python
               uses: actions/setup-python@v5
@@ -34,7 +34,6 @@ jobs:
                 pip install -U jupyter-book
                 jupyter-book clean .
                 jupyter-book build .
-                working-directory: gravity_modeling_paper_demos_github
     
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
