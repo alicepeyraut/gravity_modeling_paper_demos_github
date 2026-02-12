@@ -27,7 +27,8 @@ jobs:
               with:
                 python-version: '3.12'
 
-
+            - run: ls -a
+                
             - name: Install and build Jupyter Book
               run: |
                 pip install -U jupyter-book
