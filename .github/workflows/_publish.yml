@@ -11,33 +11,29 @@ name: Build and Deploy Jupyter Book
 on:
   - push
 
-jobs:
-  build_and_deploy_jupyter_book:
-    runs-on: ubuntu-latest
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          pip install -U jupyter-book
+          jupyter-book clean .
+          jupyter-book build .
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "gravity_modeling_paper_demos_github/_build/html"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@main
-
-    - name: Build Jupyter Book
-      run: |
-        pip install -U jupyter-book
-        jupyter-book clean .
-        jupyter-book build .
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@main
-      with:
-        path: "gravity_modeling_paper_demos_github/_build/html"
-
-    - name: Deploy Jupyter Book to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@main
-
+      - uses: actions/deploy-pages@v4
+        id: deployment
 
 
   build_docker_image:
