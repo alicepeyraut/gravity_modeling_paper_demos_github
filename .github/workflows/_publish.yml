@@ -33,7 +33,7 @@ jobs:
               run: |
                 pip install -U jupyter-book
                 jupyter-book clean .
-                jupyter-book build .--config _config.yml --toc _toc.yml
+                jupyter-book build .
     
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
