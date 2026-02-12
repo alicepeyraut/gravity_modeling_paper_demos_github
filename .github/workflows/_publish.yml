@@ -23,7 +23,7 @@ jobs:
           jupyter-book build .
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: "gravity_modeling_paper_demos_github/_build/html"
+          path: /_build/html
 
   deploy:
     needs: build
