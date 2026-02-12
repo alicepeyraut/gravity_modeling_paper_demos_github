@@ -34,6 +34,7 @@ jobs:
                 pip install -U jupyter-book
                 jupyter-book clean .
                 jupyter-book build .
+              working-directory: gravity_modeling_paper_demos_github
     
             # Save the build output as artifacts (to be reused in deploy stage)
             - name: Upload Build Artifacts
